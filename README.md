@@ -1,5 +1,8 @@
 # Day 11 — SVM/360 Fisheye Lab
 
+> **Bài nộp của Cù Đức Quang · 2A202602188 · slice B3-dense · nhóm ThangDz.**
+> Repo nhóm: https://github.com/cuducquang/K4-DAY11-ThangDz
+
 **Bài chính Day 11 · 240 phút lab · mỗi học viên nộp một repo Public.** Bạn có thể trao đổi và đổi bản export để QA, nhưng tự gán nhãn, ghi quyết định và nộp bài của mình. Bắt đầu từ trang này; [GUIDE.md](GUIDE.md) là hướng dẫn thao tác CVAT chi tiết khi cần, còn [RUBRIC.md](RUBRIC.md) cho biết **100 điểm** được đọc từ bằng chứng nào.
 
 ## Bạn sẽ làm gì và nộp gì?
