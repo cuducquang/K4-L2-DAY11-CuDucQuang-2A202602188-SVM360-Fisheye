@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,25,"Thấp: xe và người ở giữa vòng kính, ít méo.",Giữ baseline so sánh. Lấy mẫu rải theo nhiều chuyến và giờ trong ngày; mỗi cảnh liên tục lấy tối đa 1 frame mỗi 5 giây.
+front,hard,30,"Cao: phố đông, xe ba bánh bị model gọi Truck/Car, vật tối trong hiên.","ADASIND cho thấy lỗi class ThreeWheeler (4 ca) và người trong vùng tối. Chọn cảnh chợ/phố đông, ngược sáng và ban đêm; mỗi cảnh chỉ tính một cụm."
+rear,normal,20,Thấp-trung bình: xe bám sau ở tâm ảnh.,"Rear ít vật cắt ngang hơn front. Giữ đủ mẫu để phát hiện lỗi ego_body (cản sau, biển số) mà không tốn ngân sách."
+rear,hard,25,"Trung bình-cao: xe áp sát, lùi xe vào ô đỗ, vật thấp sát cản.","Vật cận cảnh bị kéo giãn ở edge, dễ box lỏng. Có vạch ô đỗ nên dùng lại quy ước parking_line và free_space."
+left,normal,20,"Trung bình: vỉa hè, xe đỗ song song, ego_body là gương/thân xe.",Camera bên nhìn gần như vuông góc chiều đi; chỉ cần đủ mẫu để kiểm polygon ego_body không trùm vật thật.
+left,hard,30,"Cao: vùng seam với front/rear, xe máy vượt sát, vật bị cắt ở vành kính.",Zone edge gãy nặng nhất ở ADASIND (M sót 4/4). Chọn ca có vật đi qua seam để soát policy hai box; mỗi lần vượt tính là một ca.
+right,normal,20,"Trung bình: như left, phía làn/đường đối diện tùy nước lái.",Cân đối với left. Kiểm tra lỗi ego_body và truncated ở mép.
+right,hard,30,"Cao: seam, người đứng sát xe, xe ba bánh sát mép bị che bởi ego.","Ở ADASIND 199770, vật sát mép phải bị gọi sai class và bị ignore nuốt. Ưu tiên ca có người hoặc xe chạm vùng ego_body."
